@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'NameVaild.dart';
 
@@ -17,17 +18,21 @@ class EmailTextfaild extends StatelessWidget {
                   height: 20,
                 ),
                 TextFormField(
+                 inputFormatters: [FilteringTextInputFormatter.allow(RegExp (r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+com"))], 
                   controller: TextEditingController(),
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   decoration: InputDecoration(
+                    
+                    filled: true,
                     enabledBorder: OutlineInputBorder(
+                      
                           borderSide: BorderSide(
                             color: const Color.fromARGB(251, 235, 175, 9),
                             width: 3,
                           ),
                           borderRadius: BorderRadius.circular(10)
                     ),
-                      hintStyle: TextStyle(color: Colors.white),
+                      hintStyle: TextStyle(color: Colors.black),
                       fillColor: Colors.white,
                       border: OutlineInputBorder(
                           borderSide: BorderSide(

@@ -23,10 +23,10 @@ final String text ;
                  
                   controller: TextEditingController(),
                   autovalidateMode: AutovalidateMode.onUserInteraction,
-                  
+                  obscureText: true,
                   decoration: InputDecoration(
-
-                      hintStyle: TextStyle(color: Colors.white),
+filled: true,
+                      hintStyle: TextStyle(color: Colors.black),
                       fillColor: Colors.white,
                        enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
